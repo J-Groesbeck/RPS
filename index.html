@@ -14,34 +14,41 @@
 </head>
 
 <body>
-    <header>
+    <header class="container-fluid">
         <div class="row text-center">
-            <h1>Rock Paper Scissors</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, molestias exercitationem. Pariatur
-                veritatis, delectus cum consectetur libero nihil asperiores unde dignissimos facere praesentium neque
-                commodi earum accusantium, dolorum est vero!</p>
+            <div class="col-12">
+                <h1>Rock Paper Scissors</h1>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-10">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, molestias exercitationem. Pariatur
+                    veritatis, delectus cum consectetur libero nihil asperiores unde dignissimos facere praesentium
+                    neque
+                    commodi earum accusantium, dolorum est vero!</p>
+            </div>
+            <div class="col-1"></div>
         </div>
     </header>
     <main class="container">
         <div class="row">
-            <button id="input-name" onclick="inputName()" class="btn btn-primary">Input your name</button>
+            <button onclick="inputName()" id="input-name" class="btn btn-primary">Input your name</button>
         </div>
         <div id="game">
-            <div class="row" id="choices">
+            <div class="row text-center" id="choices">
                 <div class="col-4">
-                    <img src="" onclick="oneRound('rock')">
+                    <img src="img/rock.png" onclick="oneRound('Rock')" class="w-50">
                 </div>
                 <div class="col-4">
-                    <img src="" onclick="oneRound('paper')">
+                    <img src="img/paper.png" onclick="oneRound('Paper')" class="w-50">
                 </div>
                 <div class="col-4">
-                    <img src="" onclick="oneRound('scissors')">
+                    <img src="img/scissors.png" onclick="oneRound('Scissors')" class="w-50">
                 </div>
             </div>
             <div class="row" id="end-screen">
 
             </div>
-            <div class="row">
+            <div class="row text-center">
                 <div class="col-2"></div>
                 <div class="col-3">
                     <p>
