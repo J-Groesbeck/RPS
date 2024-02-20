@@ -36,17 +36,20 @@
         <div id="game">
             <div class="row text-center" id="choices">
                 <div class="col-4">
-                    <img src="img/rock.png" onclick="oneRound('Rock')" class="w-50">
+                    <img src="img/rock.png" onclick="oneRound('Rock')" class="w-50 pointer">
                 </div>
                 <div class="col-4">
-                    <img src="img/paper.png" onclick="oneRound('Paper')" class="w-50">
+                    <img src="img/paper.png" onclick="oneRound('Paper')" class="w-50 pointer">
                 </div>
                 <div class="col-4">
-                    <img src="img/scissors.png" onclick="oneRound('Scissors')" class="w-50">
+                    <img src="img/scissors.png" onclick="oneRound('Scissors')" class="w-50 pointer">
                 </div>
             </div>
-            <div class="row" id="end-screen">
-
+            <div class="row text-center" id="end-screen">
+                <h1 id="victory-or-loss"></h1>
+                <h2 id="insults-or-compliments"></h2>
+                <img src="" id="result-picture">
+                <button onclick="resetGame()" class="btn btn-primary">Reset</button>
             </div>
             <div class="row text-center">
                 <div class="col-2"></div>

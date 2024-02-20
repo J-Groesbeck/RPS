@@ -75,19 +75,25 @@ function oneRound(playerChoice) {
 function endGame() {
     document.getElementById('choices').style.display = 'none' // Hide buttons so can't continue
     document.getElementById('end-screen').style.display = 'inline' // Hide buttons so can't continue
-    let complimentArray = ['', '', '']
-    let insultArray = ['', '', '']
+    let complimentArray = ['Hey, that was pretty good!', 'You❜re not bad, kid!', 'Recherché job!']
+    let insultArray = ['That was impressively bad!', 'I didn❜t know it was possible to do that poorly!', 'For the sake of your self esteem, never come back.']
     let randomNumber = Math.floor(Math.random() * complimentArray.length)
     if (playerScore > computerScore) {
-        // Display "You won the game!"
-        // Add a 'random' compliment from an array as well
+        document.getElementById('victory-or-loss').innerText = 'You Won the Game!' // Display "You won the game!"
+        document.getElementById('insults-or-compliments').innerText = complimentArray[randomNumber] // Add a 'random' compliment from an array as well
+        document.getElementById('result-picture').src = 'img/celebration.jpg'
     } else {
-        // Display "You lost the game!"
-        // Add a 'random' insult from an array as well
+        document.getElementById('victory-or-loss').innerText = 'You Lost the Game!' // Display "You lost the game!"
+        document.getElementById('insults-or-compliments').innerText = insultArray[randomNumber] // Add a 'random' insult from an array as well
+        document.getElementById('result-picture').src = 'img/'
     }
 }
 
 function resetGame() {
-    // Remove the stuff added by endGame()
+    document.getElementById('end-screen').style.display = 'none' // Remove the stuff added by endGame()
     document.getElementById('choices').style.display = 'inline' // Add the buttons back in
+    playerScore = 0
+    computerScore = 0
+    document.getElementById('player-score').innerText = playerScore
+    document.getElementById('computer-score').innerText = computerScore
 }

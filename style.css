@@ -1,3 +1,8 @@
-#game {
+#game,
+#end-screen {
     display: none;
+}
+
+.pointer {
+    cursor: pointer;
 }
