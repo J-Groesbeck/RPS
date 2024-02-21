@@ -21,56 +21,59 @@
             </div>
             <div class="col-1"></div>
             <div class="col-10">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, molestias exercitationem. Pariatur
-                    veritatis, delectus cum consectetur libero nihil asperiores unde dignissimos facere praesentium
-                    neque
-                    commodi earum accusantium, dolorum est vero!</p>
+                <p>Welcome to my Rock Paper Scissors Website! Please input an name based in order to play. Then, click the image corresponding your choice. The game will go until the total points between both players is 5. Good Luck!</p>
             </div>
             <div class="col-1"></div>
         </div>
     </header>
     <main class="container">
-        <div class="row">
-            <button onclick="inputName()" id="input-name" class="btn btn-primary">Input your name</button>
+        <div class="row d-flex justify-content-center">
+            <button id="input-name" onclick="inputName()" class="btn btn-primary w-auto">Input your name</button>
         </div>
-        <div id="game">
-            <div class="row text-center" id="choices">
-                <div class="col-4">
+        <div id="game" class="d-none">
+            <div id="choices" class="row text-center">
+                <div class="col-6 col-md-4">
                     <img src="img/rock.png" onclick="oneRound('Rock')" class="w-50 pointer">
                 </div>
-                <div class="col-4">
+                <div class="col-6 col-md-4">
                     <img src="img/paper.png" onclick="oneRound('Paper')" class="w-50 pointer">
                 </div>
-                <div class="col-4">
+                <div class="col-3 d-md-none"></div>
+                <div class="col-6 col-md-4">
                     <img src="img/scissors.png" onclick="oneRound('Scissors')" class="w-50 pointer">
                 </div>
+                <div class="col-3 d-md-none"></div>
             </div>
-            <div class="row text-center" id="end-screen">
-                <h1 id="victory-or-loss"></h1>
-                <h2 id="insults-or-compliments"></h2>
-                <img src="" id="result-picture">
-                <button onclick="resetGame()" class="btn btn-primary">Reset</button>
+            <div id="end-screen" class="row text-center d-none mb-1">
+                <div class="col-12">
+                    <h1 id="victory-or-loss"></h1>
+                </div>
+                <div class="col-12">
+                    <h2 id="insults-or-compliments"></h2>
+                </div>
+                <div class="col-12 mb-1"><img src="" id="result-picture"></div>
+                <div class="col-12"><button onclick="resetGame()" class="btn btn-primary">Reset</button></div>
             </div>
             <div class="row text-center">
-                <div class="col-2"></div>
-                <div class="col-3">
+                <div class="col-2 d-none d-md-block"></div>
+                <div class="col-4 col-md-3">
                     <p>
                         <span class="name">Player</span>'s choice: <span id="player-choice"></span>
                         <br>
                         <span class="name">Player</span>'s score: <span id="player-score">0</span>
                     </p>
                 </div>
-                <div class="col-2">
+                <div class="col-4 col-md-2">
                     <p id="round-end-message"></p>
                 </div>
-                <div class="col-3">
+                <div class="col-4 col-md-3">
                     <p>
                         Computer's choice: <span id="computer-choice"></span>
                         <br>
                         Computer's score: <span id="computer-score">0</span>
                     </p>
                 </div>
-                <div class="col-2"></div>
+                <div class="col-2 d-none d-md-block"></div>
             </div>
         </div>
     </main>

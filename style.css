@@ -1,6 +1,5 @@
-#game,
-#end-screen {
-    display: none;
+body, .container {
+    background-color: #7EC8E3 !important;
 }
 
 .pointer {
