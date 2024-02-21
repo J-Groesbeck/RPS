@@ -85,7 +85,7 @@ function endGame() {
     } else {
         document.getElementById('victory-or-loss').innerText = 'You Lost the Game!' // Display "You lost the game!"
         document.getElementById('insults-or-compliments').innerText = insultArray[randomNumber] // Add a 'random' insult from an array as well
-        document.getElementById('result-picture').src = 'img/failure.jpg'
+        document.getElementById('result-picture').src = 'img/failure.png'
     }
 }
 
